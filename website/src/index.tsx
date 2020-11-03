@@ -22,7 +22,7 @@ import {
 //Google Analytics
 // import ReactGA from 'react-ga'
 
-const { REACT_APP_SERVER_URL, REACT_APP_SERVER_SUBSCRIPTIONS } = process.env;
+const { REACT_APP_SERVER_URL } = process.env;
 // const url = REACT_SERVER_URL?.toString() || "localhost:5000/graphql"
 // const subscriptionsUrl = REACT_APP_SERVER_SUBSCRIPTIONS?.toString() || "ws://localhost:5000/graphql"
 const subscriptionClient = new SubscriptionClient(
