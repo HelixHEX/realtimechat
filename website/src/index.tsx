@@ -26,7 +26,7 @@ const { REACT_APP_SERVER_URL, REACT_APP_SERVER_SUBSCRIPTIONS } = process.env;
 // const url = REACT_SERVER_URL?.toString() || "localhost:5000/graphql"
 // const subscriptionsUrl = REACT_APP_SERVER_SUBSCRIPTIONS?.toString() || "ws://localhost:5000/graphql"
 const subscriptionClient = new SubscriptionClient(
-  REACT_APP_SERVER_SUBSCRIPTIONS!,
+  "ws://20ed0f338bf7.ngrok.io/graphql"!,
   {
     reconnect: true,
   }
