@@ -73,7 +73,7 @@ const Chat: React.FC<ChatProps> = () => {
   let history = useHistory();
   useEffect(() => {
     //check if user is logged in
-    if (user.username.length < 3) {
+    if (user.username === "") {
       history.push("/");
     }
 
@@ -87,9 +87,15 @@ const Chat: React.FC<ChatProps> = () => {
         message: result?.data?.newMessage.message,
         senderName: result?.data?.newMessage.senderName,
       } as any;
-      setMessages((m) => [...m, messageText]);
+       // eslint-disable-next-line
+      if (messages.length < 1) {
+        setMessages([messageText])
+      } else {
+        setMessages([...messages, messageText])
+      }
     }
-  }, [setMessages, data, result.data, history, user, messages?.length]);
+    // eslint-disable-next-line
+  }, [setMessages, data, result.data, history, user]);
   return (
     <>
       <Flex>
