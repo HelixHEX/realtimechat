@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 
 // @ts-ignore
@@ -17,16 +17,16 @@ import {
 import Navbar from "./Navbar";
 
 //Google Analytics
-import {PageView, Event} from '../Utils/Googleanalytics'
+// import {PageView, Event} from '../Utils/Googleanalytics'
 
 interface loginProps {}
 
 store.setState("user", { username: "" });
 
 const Login: React.FC<loginProps> = () => {
-  useEffect(() => {
-    PageView()
-  }, [])
+  // useEffect(() => {
+  //   PageView()
+  // }, [])
   const toast = useToast();
 
   // eslint-disable-next-line
@@ -54,7 +54,7 @@ const Login: React.FC<loginProps> = () => {
     } else {
       updateUser((username: any) => {
         username.username = user.username;
-        Event("LOGIN", "User Login", "LOGIN_PAGE")
+        // Event("LOGIN", "User Login", "LOGIN_PAGE")
         history.push("/chat");
       });
     }
