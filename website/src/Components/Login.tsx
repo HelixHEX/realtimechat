@@ -16,8 +16,6 @@ import {
 
 import Navbar from "./Navbar";
 
-//Google Analytics
-// import {PageView, Event} from '../Utils/Googleanalytics'
 
 interface loginProps {}
 

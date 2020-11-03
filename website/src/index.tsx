@@ -19,12 +19,8 @@ import {
   ColorModeProvider,
 } from "@chakra-ui/core";
 
-//Google Analytics
-// import ReactGA from 'react-ga'
 
-const { REACT_APP_SERVER_URL } = process.env;
-// const url = REACT_SERVER_URL?.toString() || "localhost:5000/graphql"
-// const subscriptionsUrl = REACT_APP_SERVER_SUBSCRIPTIONS?.toString() || "ws://localhost:5000/graphql"
+// const { REACT_APP_SERVER_URL } = process.env;
 const subscriptionClient = new SubscriptionClient(
   "ws://20ed0f338bf7.ngrok.io/graphql"!,
   {
@@ -32,7 +28,7 @@ const subscriptionClient = new SubscriptionClient(
   }
 );
 const client = createClient({
-  url: REACT_APP_SERVER_URL!,
+  url: "https://20ed0f338bf7.ngrok.io/graphql"!,
   exchanges: [
     ...defaultExchanges,
     subscriptionExchange({
