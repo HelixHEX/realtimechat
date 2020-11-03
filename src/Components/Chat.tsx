@@ -161,6 +161,7 @@ const Messages = (props: any) => {
       </>
     );
   }
+
   return (
     <>
       <Flex w='100%' ml='10px'>
@@ -208,6 +209,7 @@ const Messages = (props: any) => {
           </Formik>
         </Box>
         <Flex mb='70px' mt='50px' w='100%' pos='relative'>
+          {/* Display Messages */}
           <ChatFeed
             messages={messages}
             hasInputField={false}
